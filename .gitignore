@@ -39,3 +39,33 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Add these under the existing sections:
+
+# Next.js 15+ specific
+/.turbo
+.turbo.json
+
+# Local development
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Build files
+.next/cache/
+
+# Optional (but recommended for Next.js projects):
+.next/static/chunks/amp.js
+.next/server/**/*.nft.json
+.next/trace
+
+# Optional for CI/CD
+.cache/
+.tmp/
+temp/
+
