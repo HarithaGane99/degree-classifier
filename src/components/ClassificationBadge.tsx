@@ -1,27 +1,28 @@
 import { FC } from 'react';
+import '../styles/main.css'; // Make sure this path is correct
 
 interface ClassificationBadgeProps {
   classification: string;
 }
 
 const ClassificationBadge: FC<ClassificationBadgeProps> = ({ classification }) => {
-  const getColor = () => {
+  const getBadgeClass = () => {
     switch (classification) {
       case '1st':
-        return 'bg-red-500 text-white';
+        return 'classification-badge-1st';
       case '2:1':
-        return 'bg-blue-500 text-white';
+        return 'classification-badge-2i';
       case '2:2':
-        return 'bg-green-500 text-white';
+        return 'classification-badge-2ii';
       case '3rd':
-        return 'bg-yellow-500 text-black';
+        return 'classification-badge-3rd';
       default:
-        return 'bg-gray-500 text-white';
+        return 'classification-badge-default';
     }
   };
 
   return (
-    <div className={`${getColor()} rounded-lg p-4 text-center text-2xl font-bold`}>
+    <div className={`classification-badge ${getBadgeClass()}`}>
       {classification} Class Honours
     </div>
   );
