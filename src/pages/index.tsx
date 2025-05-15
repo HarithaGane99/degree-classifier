@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { calculateIndicatorScore, calculateClassification } from '../utils/calculations';
 import { FiRefreshCw, FiAlertCircle, FiCode } from 'react-icons/fi';
 import { MdCalculate, MdOutlineSchool } from 'react-icons/md';
-import '../styles/main.css';
 
 interface Module {
   level: 5 | 6;
