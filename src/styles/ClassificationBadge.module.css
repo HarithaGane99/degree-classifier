@@ -1,0 +1,28 @@
+.badge {
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.badge[class*="1st"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.badge[class*="2i"] {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.badge[class*="2ii"] {
+  background-color: #10b981;
+  color: white;
+}
+
+.badge[class*="3rd"] {
+  background-color: #f59e0b;
+  color: black;
+}

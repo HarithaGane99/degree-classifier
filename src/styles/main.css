@@ -6,7 +6,10 @@
   --dark-bg: #0f172a;
   --module-bg: #1e293b;
   --text-light: #f8fafc;
+  --footer-bg: #1e293b;
+  --footer-border: #334155;
   --text-muted: #94a3b8;
+  
 }
 
 * {
@@ -166,4 +169,101 @@ body {
   .title {
     font-size: 3rem;
   }
+}
+
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Reset Button */
+.reset-btn {
+  background: linear-gradient(to right, #dc2626, #b91c1c) !important;
+}
+
+.reset-btn:hover {
+  background: linear-gradient(to right, #b91c1c, #991b1b) !important;
+}
+
+/* Footer Styles */
+.app-footer {
+  background-color: var(--module-bg);
+  border-top: 1px solid #334155;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: var(--text-muted);
+}
+
+.footer-disclaimer {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 1rem auto 0;
+}
+
+/* Credits Section */
+.credits-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.credits-section:hover {
+  opacity: 1;
+}
+
+.credit-icon {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+}
+
+.credit-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.credit-text strong {
+  color: var(--primary-blue);
+  font-weight: 600;
 }

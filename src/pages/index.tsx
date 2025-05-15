@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { calculateIndicatorScore, calculateClassification } from '../utils/calculations';
-import { FiRefreshCw, FiAlertCircle } from 'react-icons/fi';
+import { FiRefreshCw, FiAlertCircle, FiCode } from 'react-icons/fi';
 import { MdCalculate, MdOutlineSchool } from 'react-icons/md';
 import '../styles/main.css';
 
@@ -61,6 +61,16 @@ export default function DegreeCalculator() {
     setModules(initialModules);
   }, []);
 
+  const handleReset = () => {
+  setModules(prevModules => 
+    prevModules.map(module => ({
+      ...module,
+      mark: 0
+    }))
+  );
+  setResults(null);
+};
+
   const handleCalculate = () => {
     setIsCalculating(true);
     setTimeout(() => {
@@ -85,7 +95,7 @@ export default function DegreeCalculator() {
       <header className="header animate-fade">
         <h1 className="title">
           <MdOutlineSchool />
-          University Degree Classifier
+          UOW Degree Classifier - Software Engineering
         </h1>
         <p className="subtitle">
           <FiAlertCircle />
@@ -132,7 +142,16 @@ export default function DegreeCalculator() {
           ))}
         </div>
       </div>
+    <div className="button-group">
 
+      <button
+        className="calculate-btn reset-btn"
+        onClick={handleReset}
+        type="button"
+      >
+      <FiRefreshCw />
+        Reset All Marks
+      </button>
       <button
         className="calculate-btn"
         onClick={handleCalculate}
@@ -150,6 +169,10 @@ export default function DegreeCalculator() {
           </>
         )}
       </button>
+    </div>
+
+
+      
 
       {results && (
         <div className="results-card animate-fade">
@@ -166,6 +189,23 @@ export default function DegreeCalculator() {
           </div>
         </div>
       )}
+
+      <footer className="app-footer">
+        <div className="footer-content">
+          <div className="credits-section">
+            <FiCode className="credit-icon" />
+            <span className="credit-text">
+              Developed by <strong>Haritha Ganegoda</strong>
+            </span> 
+    </div>
+        <p className="footer-text">
+          © {new Date().getFullYear()} Degree Classifier - University of Westminster
+        </p>
+          <p className="footer-disclaimer">
+            This tool is for informational purposes only. Always consult official university documentation.
+          </p>
+        </div>  
+      </footer>
     </div>
   );
 }
