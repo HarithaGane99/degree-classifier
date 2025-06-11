@@ -194,7 +194,7 @@ export default function DegreeCalculator() {
           <div className="credits-section">
             <FiCode className="credit-icon" />
             <span className="credit-text">
-              Developed by <strong>Haritha Ganegoda</strong>
+              Developed by <strong>HG99</strong>
             </span> 
     </div>
         <p className="footer-text">
